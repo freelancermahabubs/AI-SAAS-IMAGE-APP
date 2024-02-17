@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/Ahwoks_dawU?feature=shared" target="_blank">
+    <a href="/" target="_blank">
       <img src="https://github.com/sujatagunale/EasyRead/assets/151519281/daf9e91b-6342-4e9a-9361-8dc2bd01ce64" alt="Project Banner">
     </a>
   <br />
@@ -15,9 +15,6 @@
 
   <h3 align="center">An AI SaaS Platform</h3>
 
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
@@ -32,7 +29,7 @@
 
 ## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
+This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
 
 If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
 
@@ -40,7 +37,7 @@ If you prefer visual learning, this is the perfect resource for you. Follow our 
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Build an AI image SaaS platform that excels in image processing capabilities, integrates a secure payment infrastructure, offers advanced image search functionalities, and supports multiple AI features, including image restoration, recoloring, object removal, generative filling, and background removal. This project can be a guide for your next AI image tool and a boost to your portfolio. 
+Build an AI image SaaS platform that excels in image processing capabilities, integrates a secure payment infrastructure, offers advanced image search functionalities, and supports multiple AI features, including image restoration, recoloring, object removal, generative filling, and background removal. This project can be a guide for your next AI image tool and a boost to your portfolio.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
 
@@ -89,8 +86,7 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Responsive UI/UX**: A seamless experience across devices with a user-friendly interface
 
-
-and many more, including code architecture and reusability 
+and many more, including code architecture and reusability
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
@@ -248,12 +244,12 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {height: "0"},
+          to: {height: "var(--radix-accordion-content-height)"},
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {height: "var(--radix-accordion-content-height)"},
+          to: {height: "0"},
         },
       },
       animation: {
@@ -350,7 +346,7 @@ module.exports = {
 }
 
 .auth {
-  @apply flex-center min-h-screen w-full bg-purple-100
+  @apply flex-center min-h-screen w-full bg-purple-100;
 }
 
 .root {
@@ -358,7 +354,7 @@ module.exports = {
 }
 
 .root-container {
-  @apply mt-16 flex-1 overflow-auto py-8 lg:mt-0 lg:max-h-screen lg:py-10
+  @apply mt-16 flex-1 overflow-auto py-8 lg:mt-0 lg:max-h-screen lg:py-10;
 }
 
 /* ========================================== TAILWIND STYLES */
@@ -782,21 +778,21 @@ export const transformationTypes = {
     type: "restore",
     title: "Restore Image",
     subTitle: "Refine images by removing noise and imperfections",
-    config: { restore: true },
+    config: {restore: true},
     icon: "image.svg",
   },
   removeBackground: {
     type: "removeBackground",
     title: "Background Remove",
     subTitle: "Removes the background of the image using AI",
-    config: { removeBackground: true },
+    config: {removeBackground: true},
     icon: "camera.svg",
   },
   fill: {
     type: "fill",
     title: "Generative Fill",
     subTitle: "Enhance an image's dimensions using AI outpainting",
-    config: { fillBackground: true },
+    config: {fillBackground: true},
     icon: "stars.svg",
   },
   remove: {
@@ -804,7 +800,7 @@ export const transformationTypes = {
     title: "Object Remove",
     subTitle: "Identify and eliminate objects from images",
     config: {
-      remove: { prompt: "", removeShadow: true, multiple: true },
+      remove: {prompt: "", removeShadow: true, multiple: true},
     },
     icon: "scan.svg",
   },
@@ -813,7 +809,7 @@ export const transformationTypes = {
     title: "Object Recolor",
     subTitle: "Identify and recolor objects from the image",
     config: {
-      recolor: { prompt: "", to: "", multiple: true },
+      recolor: {prompt: "", to: "", multiple: true},
     },
     icon: "filter.svg",
   },
@@ -857,7 +853,7 @@ export const creditFee = -1;
 <summary><code>user.model.ts</code></summary>
 
 ```typescript
-import { Schema, model, models } from "mongoose";
+import {Schema, model, models} from "mongoose";
 
 const UserSchema = new Schema({
   clerkId: {
@@ -906,7 +902,7 @@ export default User;
 <summary><code>transaction.model.ts</code></summary>
 
 ```typescript
-import { Schema, model, models } from "mongoose";
+import {Schema, model, models} from "mongoose";
 
 const TransactionSchema = new Schema({
   createdAt: {
@@ -934,7 +930,8 @@ const TransactionSchema = new Schema({
   },
 });
 
-const Transaction = models?.Transaction || model("Transaction", TransactionSchema);
+const Transaction =
+  models?.Transaction || model("Transaction", TransactionSchema);
 
 export default Transaction;
 ```
@@ -948,7 +945,7 @@ export default Transaction;
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import {useRouter} from "next/navigation";
 
 import {
   AlertDialog,
@@ -972,8 +969,7 @@ export const InsufficientCreditsModal = () => {
             <p className="p-16-semibold text-dark-400">Insufficient Credits</p>
             <AlertDialogCancel
               className="border-0 p-0 hover:bg-transparent"
-              onClick={() => router.push("/profile")}
-            >
+              onClick={() => router.push("/profile")}>
               <Image
                 src="/assets/icons/close.svg"
                 alt="credit coins"
@@ -1003,14 +999,12 @@ export const InsufficientCreditsModal = () => {
         <AlertDialogFooter>
           <AlertDialogCancel
             className="button w-full bg-purple-100 text-dark-400"
-            onClick={() => router.push("/profile")}
-          >
+            onClick={() => router.push("/profile")}>
             No, Cancel
           </AlertDialogCancel>
           <AlertDialogAction
             className="button w-full bg-purple-gradient  bg-cover"
-            onClick={() => router.push("/credits")}
-          >
+            onClick={() => router.push("/credits")}>
             Yes, Proceed
           </AlertDialogAction>
         </AlertDialogFooter>
@@ -1028,11 +1022,11 @@ export const InsufficientCreditsModal = () => {
 ```typescript
 "use server";
 
-import { revalidatePath } from "next/cache";
+import {revalidatePath} from "next/cache";
 
 import User from "../database/models/user.model";
-import { connectToDatabase } from "../database/mongoose";
-import { handleError } from "../utils";
+import {connectToDatabase} from "../database/mongoose";
+import {handleError} from "../utils";
 
 // CREATE
 export async function createUser(user: CreateUserParams) {
@@ -1052,7 +1046,7 @@ export async function getUserById(userId: string) {
   try {
     await connectToDatabase();
 
-    const user = await User.findOne({ clerkId: userId });
+    const user = await User.findOne({clerkId: userId});
 
     if (!user) throw new Error("User not found");
 
@@ -1067,12 +1061,12 @@ export async function updateUser(clerkId: string, user: UpdateUserParams) {
   try {
     await connectToDatabase();
 
-    const updatedUser = await User.findOneAndUpdate({ clerkId }, user, {
+    const updatedUser = await User.findOneAndUpdate({clerkId}, user, {
       new: true,
     });
 
     if (!updatedUser) throw new Error("User update failed");
-    
+
     return JSON.parse(JSON.stringify(updatedUser));
   } catch (error) {
     handleError(error);
@@ -1085,7 +1079,7 @@ export async function deleteUser(clerkId: string) {
     await connectToDatabase();
 
     // Find user to delete
-    const userToDelete = await User.findOne({ clerkId });
+    const userToDelete = await User.findOne({clerkId});
 
     if (!userToDelete) {
       throw new Error("User not found");
@@ -1107,12 +1101,12 @@ export async function updateCredits(userId: string, creditFee: number) {
     await connectToDatabase();
 
     const updatedUserCredits = await User.findOneAndUpdate(
-      { _id: userId },
-      { $inc: { creditBalance: creditFee }},
-      { new: true }
-    )
+      {_id: userId},
+      {$inc: {creditBalance: creditFee}},
+      {new: true}
+    );
 
-    if(!updatedUserCredits) throw new Error("User credits update failed");
+    if (!updatedUserCredits) throw new Error("User credits update failed");
 
     return JSON.parse(JSON.stringify(updatedUserCredits));
   } catch (error) {
@@ -1129,11 +1123,11 @@ export async function updateCredits(userId: string, creditFee: number) {
 ```typescript
 /* eslint-disable prefer-const */
 /* eslint-disable no-prototype-builtins */
-import { type ClassValue, clsx } from "clsx";
+import {type ClassValue, clsx} from "clsx";
 import qs from "qs";
-import { twMerge } from "tailwind-merge";
+import {twMerge} from "tailwind-merge";
 
-import { aspectRatioOptions } from "@/constants";
+import {aspectRatioOptions} from "@/constants";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -1187,7 +1181,7 @@ export const formUrlQuery = ({
   key,
   value,
 }: FormUrlQueryParams) => {
-  const params = { ...qs.parse(searchParams.toString()), [key]: value };
+  const params = {...qs.parse(searchParams.toString()), [key]: value};
 
   return `${window.location.pathname}?${qs.stringify(params, {
     skipNulls: true,
@@ -1256,16 +1250,16 @@ export const download = (url: string, filename: string) => {
       document.body.appendChild(a);
       a.click();
     })
-    .catch((error) => console.log({ error }));
+    .catch((error) => console.log({error}));
 };
 
 // DEEP MERGE OBJECTS
 export const deepMergeObjects = (obj1: any, obj2: any) => {
-  if(obj2 === null || obj2 === undefined) {
+  if (obj2 === null || obj2 === undefined) {
     return obj1;
   }
 
-  let output = { ...obj2 };
+  let output = {...obj2};
 
   for (let key in obj1) {
     if (obj1.hasOwnProperty(key)) {
@@ -1408,8 +1402,8 @@ declare type RemoveUrlQueryParams = {
 };
 
 declare type SearchParamProps = {
-  params: { id: string; type: TransformationTypeKey };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: {id: string; type: TransformationTypeKey};
+  searchParams: {[key: string]: string | string[] | undefined};
 };
 
 declare type TransformationFormProps = {
@@ -1439,13 +1433,13 @@ declare type TransformedImageProps = {
 
 ```typescript
 /* eslint-disable camelcase */
-import { clerkClient } from "@clerk/nextjs";
-import { WebhookEvent } from "@clerk/nextjs/server";
-import { headers } from "next/headers";
-import { NextResponse } from "next/server";
-import { Webhook } from "svix";
+import {clerkClient} from "@clerk/nextjs";
+import {WebhookEvent} from "@clerk/nextjs/server";
+import {headers} from "next/headers";
+import {NextResponse} from "next/server";
+import {Webhook} from "svix";
 
-import { createUser, deleteUser, updateUser } from "@/lib/actions/user.actions";
+import {createUser, deleteUser, updateUser} from "@/lib/actions/user.actions";
 
 export async function POST(req: Request) {
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
@@ -1494,12 +1488,13 @@ export async function POST(req: Request) {
   }
 
   // Get the ID and type
-  const { id } = evt.data;
+  const {id} = evt.data;
   const eventType = evt.type;
 
   // CREATE
   if (eventType === "user.created") {
-    const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
+    const {id, email_addresses, image_url, first_name, last_name, username} =
+      evt.data;
 
     const user = {
       clerkId: id,
@@ -1521,12 +1516,12 @@ export async function POST(req: Request) {
       });
     }
 
-    return NextResponse.json({ message: "OK", user: newUser });
+    return NextResponse.json({message: "OK", user: newUser});
   }
 
   // UPDATE
   if (eventType === "user.updated") {
-    const { id, image_url, first_name, last_name, username } = evt.data;
+    const {id, image_url, first_name, last_name, username} = evt.data;
 
     const user = {
       firstName: first_name,
@@ -1537,22 +1532,22 @@ export async function POST(req: Request) {
 
     const updatedUser = await updateUser(id, user);
 
-    return NextResponse.json({ message: "OK", user: updatedUser });
+    return NextResponse.json({message: "OK", user: updatedUser});
   }
 
   // DELETE
   if (eventType === "user.deleted") {
-    const { id } = evt.data;
+    const {id} = evt.data;
 
     const deletedUser = await deleteUser(id!);
 
-    return NextResponse.json({ message: "OK", user: deletedUser });
+    return NextResponse.json({message: "OK", user: deletedUser});
   }
 
   console.log(`Webhook with and ID of ${id} and type of ${eventType}`);
   console.log("Webhook body:", body);
 
-  return new Response("", { status: 200 });
+  return new Response("", {status: 200});
 }
 ```
 
@@ -1563,8 +1558,8 @@ export async function POST(req: Request) {
 
 ```typescript
 import React from "react";
-import { Control } from "react-hook-form";
-import { z } from "zod";
+import {Control} from "react-hook-form";
+import {z} from "zod";
 
 import {
   FormField,
@@ -1574,11 +1569,11 @@ import {
   FormLabel,
 } from "../ui/form";
 
-import { formSchema } from "./TransformationForm";
+import {formSchema} from "./TransformationForm";
 
 type CustomFieldProps = {
   control: Control<z.infer<typeof formSchema>> | undefined;
-  render: (props: { field: any }) => React.ReactNode;
+  render: (props: {field: any}) => React.ReactNode;
   name: keyof z.infer<typeof formSchema>;
   formLabel?: string;
   className?: string;
@@ -1595,10 +1590,10 @@ export const CustomField = ({
     <FormField
       control={control}
       name={name}
-      render={({ field }) => (
+      render={({field}) => (
         <FormItem className={className}>
           {formLabel && <FormLabel>{formLabel}</FormLabel>}
-          <FormControl>{render({ field })}</FormControl>
+          <FormControl>{render({field})}</FormControl>
           <FormMessage />
         </FormItem>
       )}
@@ -1617,8 +1612,8 @@ export const CustomField = ({
 
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams, useRouter } from "next/navigation";
-import { CldImage } from "next-cloudinary";
+import {useSearchParams, useRouter} from "next/navigation";
+import {CldImage} from "next-cloudinary";
 
 import {
   Pagination,
@@ -1626,13 +1621,13 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { transformationTypes } from "@/constants";
-import { IImage } from "@/lib/database/models/image.model";
-import { formUrlQuery } from "@/lib/utils";
+import {transformationTypes} from "@/constants";
+import {IImage} from "@/lib/database/models/image.model";
+import {formUrlQuery} from "@/lib/utils";
 
-import { Button } from "../ui/button";
+import {Button} from "../ui/button";
 
-import { Search } from "./Search";
+import {Search} from "./Search";
 
 export const Collection = ({
   hasSearch = false,
@@ -1658,7 +1653,7 @@ export const Collection = ({
       value: pageValue,
     });
 
-    router.push(newUrl, { scroll: false });
+    router.push(newUrl, {scroll: false});
   };
 
   return (
@@ -1686,8 +1681,7 @@ export const Collection = ({
             <Button
               disabled={Number(page) <= 1}
               className="collection-btn"
-              onClick={() => onPageChange("prev")}
-            >
+              onClick={() => onPageChange("prev")}>
               <PaginationPrevious className="hover:bg-transparent hover:text-white" />
             </Button>
 
@@ -1698,8 +1692,7 @@ export const Collection = ({
             <Button
               className="button w-32 bg-purple-gradient bg-cover text-white"
               onClick={() => onPageChange("next")}
-              disabled={Number(page) >= totalPages}
-            >
+              disabled={Number(page) >= totalPages}>
               <PaginationNext className="hover:bg-transparent hover:text-white" />
             </Button>
           </PaginationContent>
@@ -1709,7 +1702,7 @@ export const Collection = ({
   );
 };
 
-const Card = ({ image }: { image: IImage }) => {
+const Card = ({image}: {image: IImage}) => {
   return (
     <li>
       <Link href={`/transformations/${image._id}`} className="collection-card">
@@ -1753,11 +1746,11 @@ const Card = ({ image }: { image: IImage }) => {
 "use client";
 
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import {useRouter, useSearchParams} from "next/navigation";
+import {useEffect, useState} from "react";
 
-import { Input } from "@/components/ui/input";
-import { formUrlQuery, removeKeysFromQuery } from "@/lib/utils";
+import {Input} from "@/components/ui/input";
+import {formUrlQuery, removeKeysFromQuery} from "@/lib/utils";
 
 export const Search = () => {
   const router = useRouter();
@@ -1773,14 +1766,14 @@ export const Search = () => {
           value: query,
         });
 
-        router.push(newUrl, { scroll: false });
+        router.push(newUrl, {scroll: false});
       } else {
         const newUrl = removeKeysFromQuery({
           searchParams: searchParams.toString(),
           keysToRemove: ["query"],
         });
 
-        router.push(newUrl, { scroll: false });
+        router.push(newUrl, {scroll: false});
       }
     }, 300);
 
@@ -1814,23 +1807,24 @@ export const Search = () => {
 ```typescript
 "use server";
 
-import { revalidatePath } from "next/cache";
-import { connectToDatabase } from "../database/mongoose";
-import { handleError } from "../utils";
+import {revalidatePath} from "next/cache";
+import {connectToDatabase} from "../database/mongoose";
+import {handleError} from "../utils";
 import User from "../database/models/user.model";
 import Image from "../database/models/image.model";
-import { redirect } from "next/navigation";
+import {redirect} from "next/navigation";
 
-import { v2 as cloudinary } from 'cloudinary'
+import {v2 as cloudinary} from "cloudinary";
 
-const populateUser = (query: any) => query.populate({
-  path: 'author',
-  model: User,
-  select: '_id firstName lastName clerkId'
-})
+const populateUser = (query: any) =>
+  query.populate({
+    path: "author",
+    model: User,
+    select: "_id firstName lastName clerkId",
+  });
 
 // ADD IMAGE
-export async function addImage({ image, userId, path }: AddImageParams) {
+export async function addImage({image, userId, path}: AddImageParams) {
   try {
     await connectToDatabase();
 
@@ -1843,18 +1837,18 @@ export async function addImage({ image, userId, path }: AddImageParams) {
     const newImage = await Image.create({
       ...image,
       author: author._id,
-    })
+    });
 
     revalidatePath(path);
 
     return JSON.parse(JSON.stringify(newImage));
   } catch (error) {
-    handleError(error)
+    handleError(error);
   }
 }
 
 // UPDATE IMAGE
-export async function updateImage({ image, userId, path }: UpdateImageParams) {
+export async function updateImage({image, userId, path}: UpdateImageParams) {
   try {
     await connectToDatabase();
 
@@ -1867,14 +1861,14 @@ export async function updateImage({ image, userId, path }: UpdateImageParams) {
     const updatedImage = await Image.findByIdAndUpdate(
       imageToUpdate._id,
       image,
-      { new: true }
-    )
+      {new: true}
+    );
 
     revalidatePath(path);
 
     return JSON.parse(JSON.stringify(updatedImage));
   } catch (error) {
-    handleError(error)
+    handleError(error);
   }
 }
 
@@ -1885,9 +1879,9 @@ export async function deleteImage(imageId: string) {
 
     await Image.findByIdAndDelete(imageId);
   } catch (error) {
-    handleError(error)
-  } finally{
-    redirect('/')
+    handleError(error);
+  } finally {
+    redirect("/");
   }
 }
 
@@ -1898,16 +1892,20 @@ export async function getImageById(imageId: string) {
 
     const image = await populateUser(Image.findById(imageId));
 
-    if(!image) throw new Error("Image not found");
+    if (!image) throw new Error("Image not found");
 
     return JSON.parse(JSON.stringify(image));
   } catch (error) {
-    handleError(error)
+    handleError(error);
   }
 }
 
 // GET IMAGES
-export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
+export async function getAllImages({
+  limit = 9,
+  page = 1,
+  searchQuery = "",
+}: {
   limit?: number;
   page: number;
   searchQuery?: string;
@@ -1920,15 +1918,15 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
       api_key: process.env.CLOUDINARY_API_KEY,
       api_secret: process.env.CLOUDINARY_API_SECRET,
       secure: true,
-    })
+    });
 
-    let expression = 'folder=imaginify';
+    let expression = "folder=imaginify";
 
     if (searchQuery) {
-      expression += ` AND ${searchQuery}`
+      expression += ` AND ${searchQuery}`;
     }
 
-    const { resources } = await cloudinary.search
+    const {resources} = await cloudinary.search
       .expression(expression)
       .execute();
 
@@ -1936,21 +1934,21 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
 
     let query = {};
 
-    if(searchQuery) {
+    if (searchQuery) {
       query = {
         publicId: {
-          $in: resourceIds
-        }
-      }
+          $in: resourceIds,
+        },
+      };
     }
 
-    const skipAmount = (Number(page) -1) * limit;
+    const skipAmount = (Number(page) - 1) * limit;
 
     const images = await populateUser(Image.find(query))
-      .sort({ updatedAt: -1 })
+      .sort({updatedAt: -1})
       .skip(skipAmount)
       .limit(limit);
-    
+
     const totalImages = await Image.find(query).countDocuments();
     const savedImages = await Image.find().countDocuments();
 
@@ -1958,9 +1956,9 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
       data: JSON.parse(JSON.stringify(images)),
       totalPage: Math.ceil(totalImages / limit),
       savedImages,
-    }
+    };
   } catch (error) {
-    handleError(error)
+    handleError(error);
   }
 }
 
@@ -1979,12 +1977,12 @@ export async function getUserImages({
 
     const skipAmount = (Number(page) - 1) * limit;
 
-    const images = await populateUser(Image.find({ author: userId }))
-      .sort({ updatedAt: -1 })
+    const images = await populateUser(Image.find({author: userId}))
+      .sort({updatedAt: -1})
       .skip(skipAmount)
       .limit(limit);
 
-    const totalImages = await Image.find({ author: userId }).countDocuments();
+    const totalImages = await Image.find({author: userId}).countDocuments();
 
     return {
       data: JSON.parse(JSON.stringify(images)),
@@ -2002,19 +2000,19 @@ export async function getUserImages({
 <summary><code>transformations/[id]/page.tsx</code></summary>
 
 ```typescript
-import { auth } from "@clerk/nextjs";
+import {auth} from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 
 import Header from "@/components/shared/Header";
 import TransformedImage from "@/components/shared/TransformedImage";
-import { Button } from "@/components/ui/button";
-import { getImageById } from "@/lib/actions/image.actions";
-import { getImageSize } from "@/lib/utils";
-import { DeleteConfirmation } from "@/components/shared/DeleteConfirmation";
+import {Button} from "@/components/ui/button";
+import {getImageById} from "@/lib/actions/image.actions";
+import {getImageSize} from "@/lib/utils";
+import {DeleteConfirmation} from "@/components/shared/DeleteConfirmation";
 
-const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
-  const { userId } = auth();
+const ImageDetails = async ({params: {id}}: SearchParamProps) => {
+  const {userId} = auth();
 
   const image = await getImageById(id);
 
@@ -2112,17 +2110,17 @@ export default ImageDetails;
 <summary><code>transformations/[id]/update/page.tsx</code></summary>
 
 ```typescript
-import { auth } from "@clerk/nextjs";
-import { redirect } from "next/navigation";
+import {auth} from "@clerk/nextjs";
+import {redirect} from "next/navigation";
 
 import Header from "@/components/shared/Header";
 import TransformationForm from "@/components/shared/TransformationForm";
-import { transformationTypes } from "@/constants";
-import { getUserById } from "@/lib/actions/user.actions";
-import { getImageById } from "@/lib/actions/image.actions";
+import {transformationTypes} from "@/constants";
+import {getUserById} from "@/lib/actions/user.actions";
+import {getImageById} from "@/lib/actions/image.actions";
 
-const Page = async ({ params: { id } }: SearchParamProps) => {
-  const { userId } = auth();
+const Page = async ({params: {id}}: SearchParamProps) => {
+  const {userId} = auth();
 
   if (!userId) redirect("/sign-in");
 
@@ -2161,7 +2159,7 @@ export default Page;
 ```typescript
 "use client";
 
-import { useTransition } from "react";
+import {useTransition} from "react";
 
 import {
   AlertDialog,
@@ -2174,11 +2172,11 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { deleteImage } from "@/lib/actions/image.actions";
+import {deleteImage} from "@/lib/actions/image.actions";
 
-import { Button } from "../ui/button";
+import {Button} from "../ui/button";
 
-export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
+export const DeleteConfirmation = ({imageId}: {imageId: string}) => {
   const [isPending, startTransition] = useTransition();
 
   return (
@@ -2187,8 +2185,7 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
         <Button
           type="button"
           className="button h-[44px] w-full md:h-[54px]"
-          variant="destructive"
-        >
+          variant="destructive">
           Delete Image
         </Button>
       </AlertDialogTrigger>
@@ -2211,8 +2208,7 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
               startTransition(async () => {
                 await deleteImage(imageId);
               })
-            }
-          >
+            }>
             {isPending ? "Deleting..." : "Delete"}
           </AlertDialogAction>
         </AlertDialogFooter>
@@ -2229,8 +2225,8 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
 
 ```typescript
 /* eslint-disable camelcase */
-import { createTransaction } from "@/lib/actions/transaction.action";
-import { NextResponse } from "next/server";
+import {createTransaction} from "@/lib/actions/transaction.action";
+import {NextResponse} from "next/server";
 import stripe from "stripe";
 
 export async function POST(request: Request) {
@@ -2244,7 +2240,7 @@ export async function POST(request: Request) {
   try {
     event = stripe.webhooks.constructEvent(body, sig, endpointSecret);
   } catch (err) {
-    return NextResponse.json({ message: "Webhook error", error: err });
+    return NextResponse.json({message: "Webhook error", error: err});
   }
 
   // Get the ID and type
@@ -2252,7 +2248,7 @@ export async function POST(request: Request) {
 
   // CREATE
   if (eventType === "checkout.session.completed") {
-    const { id, amount_total, metadata } = event.data.object;
+    const {id, amount_total, metadata} = event.data.object;
 
     const transaction = {
       stripeId: id,
@@ -2264,11 +2260,11 @@ export async function POST(request: Request) {
     };
 
     const newTransaction = await createTransaction(transaction);
-    
-    return NextResponse.json({ message: "OK", transaction: newTransaction });
+
+    return NextResponse.json({message: "OK", transaction: newTransaction});
   }
 
-  return new Response("", { status: 200 });
+  return new Response("", {status: 200});
 }
 ```
 
@@ -2278,18 +2274,18 @@ export async function POST(request: Request) {
 <summary><code>credits/page.tsx</code></summary>
 
 ```typescript
-import { SignedIn, auth } from "@clerk/nextjs";
+import {SignedIn, auth} from "@clerk/nextjs";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import {redirect} from "next/navigation";
 
 import Header from "@/components/shared/Header";
-import { Button } from "@/components/ui/button";
-import { plans } from "@/constants";
-import { getUserById } from "@/lib/actions/user.actions";
+import {Button} from "@/components/ui/button";
+import {plans} from "@/constants";
+import {getUserById} from "@/lib/actions/user.actions";
 import Checkout from "@/components/shared/Checkout";
 
 const Credits = async () => {
-  const { userId } = auth();
+  const {userId} = auth();
 
   if (!userId) redirect("/sign-in");
 
@@ -2320,8 +2316,7 @@ const Credits = async () => {
                 {plan.inclusions.map((inclusion) => (
                   <li
                     key={plan?.name + inclusion?.label}
-                    className="flex items-center gap-4"
-                  >
+                    className="flex items-center gap-4">
                     <Image
                       src={`/assets/icons/${
                         inclusion?.isIncluded ? "check.svg" : "cross.svg"
@@ -2368,13 +2363,13 @@ export default Credits;
 ```typescript
 "use client";
 
-import { loadStripe } from "@stripe/stripe-js";
-import { useEffect } from "react";
+import {loadStripe} from "@stripe/stripe-js";
+import {useEffect} from "react";
 
-import { useToast } from "@/components/ui/use-toast";
-import { checkoutCredits } from "@/lib/actions/transaction.action";
+import {useToast} from "@/components/ui/use-toast";
+import {checkoutCredits} from "@/lib/actions/transaction.action";
 
-import { Button } from "../ui/button";
+import {Button} from "../ui/button";
 
 const Checkout = ({
   plan,
@@ -2387,7 +2382,7 @@ const Checkout = ({
   credits: number;
   buyerId: string;
 }) => {
-  const { toast } = useToast();
+  const {toast} = useToast();
 
   useEffect(() => {
     loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
@@ -2432,8 +2427,7 @@ const Checkout = ({
         <Button
           type="submit"
           role="link"
-          className="w-full rounded-full bg-purple-gradient bg-cover"
-        >
+          className="w-full rounded-full bg-purple-gradient bg-cover">
           Buy Credit
         </Button>
       </section>
@@ -2450,23 +2444,23 @@ export default Checkout;
 <summary><code>profile/page.tsx</code></summary>
 
 ```typescript
-import { auth } from "@clerk/nextjs";
+import {auth} from "@clerk/nextjs";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import {redirect} from "next/navigation";
 
-import { Collection } from "@/components/shared/Collection";
+import {Collection} from "@/components/shared/Collection";
 import Header from "@/components/shared/Header";
-import { getUserImages } from "@/lib/actions/image.actions";
-import { getUserById } from "@/lib/actions/user.actions";
+import {getUserImages} from "@/lib/actions/image.actions";
+import {getUserById} from "@/lib/actions/user.actions";
 
-const Profile = async ({ searchParams }: SearchParamProps) => {
+const Profile = async ({searchParams}: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
-  const { userId } = auth();
+  const {userId} = auth();
 
   if (!userId) redirect("/sign-in");
 
   const user = await getUserById(userId);
-  const images = await getUserImages({ page, userId: user._id });
+  const images = await getUserImages({page, userId: user._id});
 
   return (
     <>
@@ -2518,7 +2512,6 @@ export default Profile;
 
 </details>
 
-
 ## <a name="links">🔗 Links</a>
 
 Public Assets used in the project can be found [here](https://drive.google.com/file/d/1uv1zyCjbYBQE9qnwh2snwO0NBgoop5gz/view?usp=sharing)
@@ -2540,7 +2533,7 @@ Enjoyed creating this project? Dive deeper into our PRO courses for a richer lea
 
 And if you're hungry for more than just a course and want to understand how we learn and tackle tech challenges, hop into our personalized masterclass. We cover best practices, different web skills, and offer mentorship to boost your confidence. Let's learn and grow together!
 
-<a href="/ target="_blank">
+<a href="/ target="\_blank">
 <img src="https://github.com/sujatagunale/EasyRead/assets/151519281/fed352ad-f27b-400d-9b8f-c7fe628acb84" alt="Project Banner">
 </a>
 
